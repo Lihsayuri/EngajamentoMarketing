@@ -30,8 +30,9 @@ class TesteEngajamento {
 	@Test
 	public void UmaAvaliacaoValida() {
 		usuario = new Usuario("Joao");
+		Usuario usuario2 = new Usuario("Joana");
 		Video video = new Video(0, usuario, produto);
-		usuario.postaVideo(0, produto);
+		usuario2.postaVideo(0, produto);
 		video.adicionaAvaliacao(usuario, 3);
 		video.mediaAvaliacoes();
 		assertEquals(3, usuario.totalAvaliacoes());
@@ -40,8 +41,9 @@ class TesteEngajamento {
 	@Test
 	public void TresAvaliacoesValidas() {
 		usuario = new Usuario("Joao");
+		Usuario usuario2 = new Usuario("Joana");
 		Video video = new Video(0, usuario, produto);
-		usuario.postaVideo(0, produto);
+		usuario2.postaVideo(0, produto);
 		video.adicionaAvaliacao(usuario, 3);
 		video.adicionaAvaliacao(usuario, 4);
 		video.adicionaAvaliacao(usuario, 5);
@@ -52,8 +54,9 @@ class TesteEngajamento {
 	@Test
 	public void AvaliacoesDoisVideos() {
 		usuario = new Usuario("Joao");
+		Usuario usuario2 = new Usuario("Joana");
 		Video video1 = new Video(0, usuario, produto);
-		usuario.postaVideo(0, produto);
+		usuario2.postaVideo(0, produto);
 		video1.adicionaAvaliacao(usuario, 3);
 		video1.adicionaAvaliacao(usuario, 4);
 		video1.mediaAvaliacoes();
